@@ -16,14 +16,14 @@ let ver = 0
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 const client = [
-    { nom: 'Doucoure', prenom: 'Mohamed', email: 'mouhamed12@gmail.com', phone: '785444510', transaction: [[1, 2, 3, 4], ['10-01-2023', '01-02-2023', '01-10-2023', '12-16-2023'], [-1, 1, 1, -1], [12000, 12000, 12500, 1300]], src: 'https://images.unsplash.com/photo-1551966775-a4ddc8df052b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80', solde: 10000, envoyer: 1 },
-    { nom: 'Ndiaye', prenom: 'Diogual', email: 'diogalSA12@gmail.com', phone: '781943098', transaction: [[1, 2], ['10-01-2023', '01-02-2023'], [-1, 1], [12000, 12000]], src: 'https://images.unsplash.com/photo-1542000551557-3fd0ad0eb15f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80', solde: 2000, envoyer: 1 },
-    { nom: 'Diop', prenom: 'Babacar', email: 'diopSA12@gmail.com', phone: '781254434', transaction: [[1, 2, 3], ['10-01-2023', '01-02-2023', '01-05-20023'], [-1, 1, -1], [12000, 12000, 12000]], src: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1140&q=80', solde: 3000, envoyer: 1 },
-    { nom: 'Ndiaye', prenom: 'Mar', email: 'MarSA12@gmail.com', phone: '783321099', transaction: [[1, 2], ['10-01-2023', '01-02-2023'], [-1, 1], [1200, 1200]], src: 'https://plus.unsplash.com/premium_photo-1664355811228-3baa53f4b179?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80', solde: 4000, envoyer: 1 },
-    { nom: 'Ndiaye', prenom: 'Maimouma', email: 'NdiayeSA12@gmail.com', phone: '771234567', transaction: [[1, 2], ['10-01-2023', '01-02-2023'], [-1, 1], [13000, 13000]], src: 'https://images.unsplash.com/photo-1565843248736-8c41e6db117b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', solde: 5000, envoyer: 1 },
-    { nom: 'Fall', prenom: 'babacar', email: 'FallSA12@gmail.com', phone: '789789988', transaction: [[1, 2], ['10-01-2023', '01-02-2023'], [-1, 1], [1000, 1000]], src: 'https://images.unsplash.com/photo-1483193722442-5422d99849bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', solde: 6000, envoyer: 1 },
+    { nom: 'Doucoure', prenom: 'Mohamed', email: 'mouhamed12@gmail.com', phone: '785444510', transaction: [[1, 2, 3, 4], ['10-01-2023', '01-02-2023', '01-10-2023', '12-16-2023'], [-1, 1, 1, -1], [12000, 12000, 12500, 1300]], src: 'https://images.unsplash.com/photo-1551966775-a4ddc8df052b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80', solde: 10000, envoyer: 1, soldeTranfere: 0 },
+    { nom: 'Ndiaye', prenom: 'Diogual', email: 'diogalSA12@gmail.com', phone: '781943098', transaction: [[1, 2], ['10-01-2023', '01-02-2023'], [-1, 1], [12000, 12000]], src: 'https://images.unsplash.com/photo-1542000551557-3fd0ad0eb15f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80', solde: 2000, envoyer: 1, soldeTranfere: 0 },
+    { nom: 'Diop', prenom: 'Babacar', email: 'diopSA12@gmail.com', phone: '781254434', transaction: [[1, 2, 3], ['10-01-2023', '01-02-2023', '01-05-20023'], [-1, 1, -1], [12000, 12000, 12000]], src: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1140&q=80', solde: 3000, envoyer: 1, soldeTranfere: 0 },
+    { nom: 'Ndiaye', prenom: 'Mar', email: 'MarSA12@gmail.com', phone: '783321099', transaction: [[1, 2], ['10-01-2023', '01-02-2023'], [-1, 1], [1200, 1200]], src: 'https://plus.unsplash.com/premium_photo-1664355811228-3baa53f4b179?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80', solde: 4000, envoyer: 1, soldeTranfere: 0 },
+    { nom: 'Ndiaye', prenom: 'Maimouma', email: 'NdiayeSA12@gmail.com', phone: '771234567', transaction: [[1, 2], ['10-01-2023', '01-02-2023'], [-1, 1], [13000, 13000]], src: 'https://images.unsplash.com/photo-1565843248736-8c41e6db117b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', solde: 5000, envoyer: 1, soldeTranfere: 0 },
+    { nom: 'Fall', prenom: 'babacar', email: 'FallSA12@gmail.com', phone: '789789988', transaction: [[1, 2], ['10-01-2023', '01-02-2023'], [-1, 1], [1000, 1000]], src: 'https://images.unsplash.com/photo-1483193722442-5422d99849bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', solde: 6000, envoyer: 1, soldeTranfere: 0 },
     { nom: 'Sene', prenom: 'Aly', email: 'AlySA12@gmail.com', phone: '778900990', transaction: [[1, 2], ['10-01-2023', '01-02-2023'], [-1, 1], [12000, 12000]], src: 'https://images.unsplash.com/photo-1524503033411-c9566986fc8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', solde: 7000, envoyer: 1 },
-    { nom: 'Wann', prenom: 'Birane', email: 'WaneSA12@gmail.com', phone: '761234566', transaction: [[1, 2], ['10-01-2023', '01-02-2023'], [-1, 1], [120, 120]], src: 'https://plus.unsplash.com/premium_photo-1664100478116-0d43d1ba44c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80', solde: 8000, envoyer: 1 }
+    { nom: 'Wann', prenom: 'Birane', email: 'WaneSA12@gmail.com', phone: '761234566', transaction: [[1, 2], ['10-01-2023', '01-02-2023'], [-1, 1], [120, 120]], src: 'https://plus.unsplash.com/premium_photo-1664100478116-0d43d1ba44c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80', solde: 8000, envoyer: 1, soldeTranfere: 0 }
 ]
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -293,6 +293,9 @@ btn_enregistre.addEventListener('click', () => {
 
             } else {
                 notification.innerHTML = 'ENVOYER avec succes'
+                console.log(argent);
+                client[a].soldeTranfere = argent
+                console.log(client[a].soldeTranfere);
                 setTimeout(() => {
                     notification.style.display = 'none'
                 }, 2000);
@@ -454,52 +457,49 @@ const Non = document.querySelector('.Non')
 
 
 oui.addEventListener('click', () => {
-    console.log(client[a].envoyer);
     if (client[a].envoyer == 1) {
         alert('Ce client n\'a pas fait d\'envoie')
         notification.innerHTML = "'Ce client n\'a pas fait d\'envoie'"
     } else {
         if (ver == 0) {
-            // notification.innerHTML = 'annulation impossible'
+            notification.innerHTML = 'annulation impossible'
         } else {
-            
-
             number_existe(number, client)
-            if (client[indice].solde<argent) {
+            if (client[indice].solde < client[a].soldeTranfere) {
                 alert(`Argent Retirer par ${client[indice].prenom} `)
-                notification.innerHTML ='Argent Retirer vous etes payer par le service'
-            }else{
+                notification.innerHTML = 'Argent Retirer vous etes payer par le service'
+            } else {
                 let val = (+client[a].transaction[2].length) + (+1)
-            client[a].solde = (+client[a].solde) + (+argent)
-            solde.textContent = `${client[a].solde}`
-            client[a].transaction[2].push(3)
-            client[a].transaction[3].push(argent)
-            client[a].transaction[0].push(val)
-            console.log(client[a].transaction[2]);
-            nbr_transaction[0].innerHTML = client[a].transaction[0].length
-            let date1 = new Date();
-            let jour_mois = date1.getDate()
-            let mois = date1.getMonth()
-            mois = mois + 1;
-            let annee = date1.getFullYear();
-            let date2 = `${jour_mois}-${mois}-${annee}`;
-            client[a].transaction[1].push(date2)
-            let tr = document.createElement('tr')
-            for (let index = 0; index < 4; index++) {
-                td = document.createElement('td');
-                td.innerHTML = `${client[a].transaction[index][val - 1]}`
-                tr.appendChild(td)
-            }
-            entete[0].appendChild(tr);
+                client[a].solde = (+client[a].solde) + (+client[a].soldeTranfere)
+                solde.textContent = `${client[a].solde}`
+                client[a].transaction[2].push(3)
+                client[a].transaction[3].push(argent)
+                client[a].transaction[0].push(val)
+                console.log(client[a].transaction[2]);
+                nbr_transaction[0].innerHTML = client[a].transaction[0].length
+                let date1 = new Date();
+                let jour_mois = date1.getDate()
+                let mois = date1.getMonth()
+                mois = mois + 1;
+                let annee = date1.getFullYear();
+                let date2 = `${jour_mois}-${mois}-${annee}`;
+                client[a].transaction[1].push(date2)
+                let tr = document.createElement('tr')
+                for (let index = 0; index < 4; index++) {
+                    td = document.createElement('td');
+                    td.innerHTML = `${client[a].transaction[index][val - 1]}`
+                    tr.appendChild(td)
+                }
+                entete[0].appendChild(tr);
 
 
 
-                client[indice].solde = (+client[indice].solde) - (+argent)
+                client[indice].solde = (+client[indice].solde) - (+client[a].soldeTranfere)
                 client[indice].transaction[2].push(2)
                 client[indice].transaction[3].push(argent)
                 client[indice].transaction[0].push(val)
                 client[indice].transaction[1].push(date2)
-                client[a].envoyer=1
+                client[a].envoyer = 1
             }
         }
     }
