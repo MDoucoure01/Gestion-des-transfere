@@ -148,6 +148,8 @@ for (let i = 0; i < client[a].transaction[0].length; i++) {
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
 btn_next.addEventListener('click', () => {
     console.log(longueur);
     notification.innerHTML = ''
@@ -163,8 +165,6 @@ btn_next.addEventListener('click', () => {
     phone.textContent = `${client[a].phone}`
     image[0].src = `${client[a].src}`
     solde.textContent = `${client[a].solde}`
-
-
     for (let i = 0; i < client[a].transaction[0].length; i++) {
         let tr = document.createElement('tr');
         for (let index = 0; index < 4; index++) {
@@ -391,32 +391,35 @@ function displayClients(searchValue) {
 
     filteredClients.forEach(C => {
         const listItem = document.createElement('div');
-        listItem.innerHTML = `<div class="couleur">${C.prenom} ${C.nom}-${C.phone}</div>`;
+        listItem.innerHTML += `<div class="couleur">${C.prenom} ${C.nom}-${C.phone}</div>`;
         clientList.appendChild(listItem);
-        const couleur = document.querySelector('.couleur')
-        couleur.addEventListener('click', () => {
-            searchInput.value = `${C.prenom} ${C.nom} ${C.phone}`
-            console.log(listItem.textContent);
-            let coupe = listItem.textContent.split("-")
-            number_existe(coupe[1], client)
-            nom.textContent = `${client[indice].nom}`;
-            prenom.textContent = `${client[indice].prenom}`;
-            email.textContent = `${client[indice].email}`;
-            phone.textContent = `${client[indice].phone}`
-            image[0].src = `${client[indice].src}`
-            solde.textContent = `${client[indice].solde}`
-            nbr_transaction[0].innerHTML = client[indice].transaction[0].length
-            entete[0].innerHTML = ''
-            for (let i = 0; i < client[indice].transaction[0].length; i++) {
-                let tr = document.createElement('tr');
-                for (let index = 0; index < 4; index++) {
-                    td = document.createElement('td');
-                    td.innerHTML = client[indice].transaction[index][i]
-                    tr.appendChild(td)
+        const couleur = document.querySelectorAll('.couleur')
+        couleur.forEach(element => {
+            element.addEventListener('click', () => {
+                console.log(element);
+                searchInput.value = `${C.prenom} ${C.nom} ${C.phone}`
+                console.log(listItem.textContent);
+                let coupe = listItem.textContent.split("-")
+                number_existe(coupe[1], client)
+                nom.textContent = `${client[indice].nom}`;
+                prenom.textContent = `${client[indice].prenom}`;
+                email.textContent = `${client[indice].email}`;
+                phone.textContent = `${client[indice].phone}`
+                image[0].src = `${client[indice].src}`
+                solde.textContent = `${client[indice].solde}`
+                nbr_transaction[0].innerHTML = client[indice].transaction[0].length
+                entete[0].innerHTML = ''
+                for (let i = 0; i < client[indice].transaction[0].length; i++) {
+                    let tr = document.createElement('tr');
+                    for (let index = 0; index < 4; index++) {
+                        td = document.createElement('td');
+                        td.innerHTML = client[indice].transaction[index][i]
+                        tr.appendChild(td)
+                    }
+                    entete[0].appendChild(tr);
                 }
-                entete[0].appendChild(tr);
-            }
-        })
+            })
+        });
     });
 }
 
@@ -503,8 +506,44 @@ oui.addEventListener('click', () => {
             }
         }
     }
-    annule_transaction.style.display = 'none'
+    // annule_transaction.style.display = 'none'
 })
 Non.addEventListener('click', () => {
     annule_transaction.style.display = 'none'
 })
+
+const supprime = document.querySelector('.supprime')
+const editer = document.querySelector('.modif')
+
+supprime.addEventListener('click',()=>{
+    client.splice(a,1)
+    
+    nbr_transaction[0].innerHTML = client[a].transaction[0].length
+    nom.textContent = `${client[a].nom}`;
+    prenom.textContent = `${client[a].prenom}`;
+    email.textContent = `${client[a].email}`;
+    phone.textContent = `${client[a].phone}`
+    image[0].src = `${client[a].src}`
+    solde.textContent = `${client[a].solde}`
+    for (let i = 0; i < client[a].transaction[0].length; i++) {
+        let tr = document.createElement('tr');
+        for (let index = 0; index < 4; index++) {
+            td = document.createElement('td');
+            td.innerHTML = client[a].transaction[index][i]
+            tr.appendChild(td)
+        }
+        entete[0].appendChild(tr);
+    }
+    a++
+})
+
+// editer.addEventListener('click',()=>{
+//     Nom.value = client[a].nom
+//     Prenom.value = client[a].prenom
+//     Email.value = client[a].email
+//     Phone.value = client[a].phone
+//     imag.value = client[a].src
+
+//     card.style.display = 'none'
+//     modal.style.display = 'flex'
+// })

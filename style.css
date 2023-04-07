@@ -50,6 +50,7 @@ body{
     font-family: 'Courier New', Courier, monospace;
     position: relative;
     overflow: hidden;
+    /* display: none; */
 }
 
 img{
@@ -163,7 +164,7 @@ tr,td{
 .form.hide{
     display: none;
 }
-.plus,.tt{
+.plus,.tt,.tte{
     font-size: 1em;
     font-weight: bold;
 }
@@ -189,7 +190,7 @@ tr,td{
     font-weight: bold;
     justify-content: space-between;
 }
-.con{
+.con,.cone{
     height: 50%;
     width: 70%;
     justify-content: space-around;
@@ -211,4 +212,18 @@ tr,td{
 }
 .couleur2:hover{
     color: #799eb0;
+}
+.icone{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.modal_modifie{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(20, 20, 20,0.1);
+    position: absolute;
+    z-index: 9999999;
+    display: none;
 }
